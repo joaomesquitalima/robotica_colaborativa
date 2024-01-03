@@ -22,4 +22,8 @@ sleep(1)
 
 while True:
     green_button = client.read_discrete_inputs(3,1)[0]
+    red_button = client.read_discrete_inputs(4,1)[0]
+    sensor_1 = client.read_discrete_inputs(1,1)[0]
+    print('verde: ', green_button,'vermelho: ', red_button,"sensor: ",sensor_1)
+    sleep(1)
    
