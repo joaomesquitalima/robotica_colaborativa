@@ -22,20 +22,23 @@ play_pause = client.write_single_coil(7104,1)
 # modbus_play = client.write_single_coil(7104, 1)
 
 sleep(1)
+# client.write_single_register(9000,0)
+# client.write_single_register(9001,0)
+# client.write_single_register(9002,0)
+# client.write_single_register(9003,0)
+
+s = 0
+s2 = 0
+s3 = 0
+seq = 0
 
 while True:
-    
-    s = int(input('Digite o valor em segundos 1:'))
-    
-        
+    s = int(input('Digite o valor em segundos 1:'))  
     s2 = int(input('Digite o valor em segundos 2:'))
-    
-
     s3 = int(input('Digite o valor em segundos 3:'))
     
-
     seq = int(input('Digite a seq:'))
-
+   
     s = s*1000
     s2 = s2*1000
     s3 = s3*1000
@@ -44,3 +47,6 @@ while True:
     client.write_single_register(9002,s3)
     
     client.write_single_register(9003,seq)
+    sleep(1)
+    
+
